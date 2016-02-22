@@ -1,0 +1,22 @@
+<template name="accueil">
+
+<div class="container">
+ <div class="row">
+ <div class="col-md-10 col-md-offset-1">
+ <div class="jumbotron">
+ <div class="text-center">
+  <h1 style="font-family: 'Gloria Hallelujah', cursive;">Todo List
+  </h1>
+{{#if currentUser}}
+{{>ifCurrentUser}}
+ {{else}}
+{{>ifSession}}
+   {{/if}}
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+</template>
+

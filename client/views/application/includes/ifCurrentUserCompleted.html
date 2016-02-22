@@ -1,0 +1,61 @@
+<template name="ifCurrentUserCompleted">
+
+
+ {{#if estVide }} 
+  <!-- <h1>yow man </h1>-->
+       <ul>
+           {{#each posts}}
+               {{#if etatCheckBox}}
+
+<div class="input-group">
+  <div class= "form-group">
+    <div class="input-group">
+      <span class="input-group-addon">
+       
+      <input type="checkbox" checked="{{etatCheckBox}}" class="toggle-checked" />
+      </span>
+   <li class="list-group-item form-control" style="width:370px; height:40px;">
+  <div class="{{#if etatCheckBox}}distinguer{{/if}}">
+   <div id="{{ _id }}"> {{ newtodo }} </div>
+   </div>
+   </li>
+   <span class="input-group-addon">
+     <a href="" class="delete" >×</a>
+   </span>
+      {{#if datePost }}
+      <span class="input-group-addon" style="background: #dff0d8;">
+      <strong> {{ datePost }} </strong>
+      </span>
+      {{/if }}
+  </div>
+</div>
+    </div> 
+           {{/if}}
+	    {{/each}}
+	</ul>
+ {{else}}
+         <div class="alert alert-warning alert-dismissable">
+           <strong>Sorry ! but you don't have a spot yet </strong>
+         </div>
+   {{/if}}
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <button type="button" class="btn btn-default"><a href="/">  All  </a></button>
+    <button type="button" class="btn btn-default"><a href="/Active">Active</a></button>
+    <button type="button" class="btn btn-default"><a href="/Completed">Completed</a></button>
+ {{#if estVide }} 
+    <button type="button" class="btn btn-default" style="text-align: right;"><a href="/">Clear completed</a></button>
+ {{/if }} 
+     
+   </div>
+   <div class="form-group" style="text-align: center;"> 
+    <input type="text" name="newtodo" maxlength=53 id="newtodo"  style="width:370px; height:32px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;border: 1px solid #ccc;border-radius: 4px;color: #555;" placeholder="Que dois-je faire ?" autofocus />
+   </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-success">Ajouter</button>
+ </div>
+  </form>
+
+
+</template>
