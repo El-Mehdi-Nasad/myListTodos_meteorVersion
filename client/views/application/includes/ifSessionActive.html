@@ -11,6 +11,11 @@
 <div class="input-group">
   <div class= "form-group">
     <div class="input-group">
+      {{#if estDateFin }}
+      <span class="input-group-addon alert-warning ">
+      <strong> {{ datePostFin }} </strong>
+      </span>
+      {{/if }}
       <span class="input-group-addon">
        
       <input type="checkbox" checked="{{etatCheckBox}}" class="toggle-checked" />
@@ -23,9 +28,9 @@
    <span class="input-group-addon">
      <a href="" class="delete" >×</a>
    </span>
-      {{#if datePost }}
+      {{#if datePostDbt }}
       <span class="input-group-addon" style="background: #dff0d8;">
-      <strong> {{ datePost }} </strong>
+      <strong> {{ datePostDbt }} </strong>
       </span>
       {{/if }}
   </div>

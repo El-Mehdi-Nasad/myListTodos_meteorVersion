@@ -8,29 +8,43 @@
 <div class="input-group">
   <div class= "form-group">
     <div class="input-group">
+ <div class="col-md-4 ">
+ <div class="col-md-10 ">
       {{#if estDateFin }}
       <span class="input-group-addon alert-warning ">
       <strong> {{ datePostFin }} </strong>
       </span>
       {{/if }}
+</div>
+ <div class="col-md-2 ">
       <span class="input-group-addon">
        
       <input type="checkbox" checked="{{etatCheckBox}}" class="toggle-checked" />
       </span>
-   <li class="list-group-item form-control" style="width:370px; height:40px;">
+</div>
+</div>
+ <div class="col-md-4 ">
+   <li class="list-group-item form-control" style="width:260px; height:29px;">
   <div class="{{#if etatCheckBox}}distinguer{{/if}}"> 
    <div id="{{ newtodo }}"> {{ newtodo }} </div>
    </div>
    </li>
+   </div>
+ <div class="col-md-4 ">
+ <div class="col-md-2 ">
    <span class="input-group-addon">
      <a href="" class="delete" >×</a>
    </span>
+</div>
+ <div class="col-md-10 ">
       {{#if datePostDbt}}
       <span class="input-group-addon" style="background: #dff0d8;">
       <strong> {{ datePostDbt}} </strong>
       </span>
       {{/if }}
   </div>
+</div>
+    </div> 
 </div>
     </div> 
 
