@@ -60,7 +60,17 @@ Template.ifSessionCompleted.events({
           var tab2 =[];
           tab2.push(post);
           Session.set("Inviter" , tab2 ); 
-            }}
+            }
+}
+  function timer(n) {
+    $(".progress-bar").css("width", n + "%");
+    if(n < 100) {
+      setTimeout(function() {
+        timer(n + 10);
+      }, 200);
+    }
+  }
+           timer(0); 
 
 	},
      

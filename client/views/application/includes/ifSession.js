@@ -32,6 +32,9 @@ Template.ifSession.events({
                  return message;
            };
 
+
+
+
              var datePost = dateFr();
 	var newtodo = $("input[name='newtodo']").val();
 		$("form input").val("");
@@ -61,8 +64,18 @@ Template.ifSession.events({
           var tab2 =[];
           tab2.push(post);
           Session.set("Inviter" , tab2 ); 
-            }}
+            }
+}
 
+  function timer(n) {
+    $(".progress-bar").css("width", n + "%");
+    if(n < 100) {
+      setTimeout(function() {
+        timer(n + 10);
+      }, 200);
+    }
+  }
+           timer(0); 
 	},
      
       "click .toggle-checked": function () {
@@ -133,8 +146,6 @@ Template.ifSession.events({
               }
           Session.set("Inviter" , tabl );
            
-           } 
-    
+           }
+
 });
-
-

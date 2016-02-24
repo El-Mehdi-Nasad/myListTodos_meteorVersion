@@ -1,5 +1,6 @@
 <template name="ifSession" >
 
+
 {{#if estVideSess }} 
        <ul>
   {{#each sessionInviter }}
@@ -8,43 +9,38 @@
 <div class="input-group">
   <div class= "form-group">
     <div class="input-group">
- <div class="col-md-4 ">
- <div class="col-md-10 ">
+
       {{#if estDateFin }}
       <span class="input-group-addon alert-warning ">
       <strong> {{ datePostFin }} </strong>
       </span>
+      {{ else }}
+      <span class="input-group-addon ">
+  <div style="width:166px; height:15px;">
+  <div class="progress  progress-striped">
+    <div class="progress-bar progress-bar-success"></div>
+  </div>
+      </div>
+      </span>
       {{/if }}
-</div>
- <div class="col-md-2 ">
       <span class="input-group-addon">
        
       <input type="checkbox" checked="{{etatCheckBox}}" class="toggle-checked" />
       </span>
-</div>
-</div>
- <div class="col-md-4 ">
-   <li class="list-group-item form-control" style="width:260px; height:29px;">
+   <li class="list-group-item form-control" style="width:370px; height:30px;">
   <div class="{{#if etatCheckBox}}distinguer{{/if}}"> 
    <div id="{{ newtodo }}"> {{ newtodo }} </div>
    </div>
    </li>
-   </div>
- <div class="col-md-4 ">
- <div class="col-md-2 ">
    <span class="input-group-addon">
      <a href="" class="delete" >×</a>
    </span>
-</div>
- <div class="col-md-10 ">
       {{#if datePostDbt}}
       <span class="input-group-addon" style="background: #dff0d8;">
       <strong> {{ datePostDbt}} </strong>
       </span>
       {{/if }}
   </div>
-</div>
-    </div> 
 </div>
     </div> 
 

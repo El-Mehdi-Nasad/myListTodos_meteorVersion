@@ -15,12 +15,20 @@
       <span class="input-group-addon alert-warning ">
       <strong> {{ datePostFin }} </strong>
       </span>
+      {{ else }}
+      <span class="input-group-addon ">
+  <div style="width:166px; height:15px;">
+  <div class="progress  progress-striped">
+    <div class="progress-bar progress-bar-success"></div>
+  </div>
+      </div>
+      </span>
       {{/if }}
       <span class="input-group-addon">
        
       <input type="checkbox" checked="{{etatCheckBox}}" class="toggle-checked" />
       </span>
-   <li class="list-group-item form-control" style="width:370px; height:40px;">
+   <li class="list-group-item form-control" style="width:370px; height:30px;">
   <div class="{{#if etatCheckBox}}distinguer{{/if}}"> 
    <div id="{{ newtodo }}"> {{ newtodo }} </div>
    </div>
